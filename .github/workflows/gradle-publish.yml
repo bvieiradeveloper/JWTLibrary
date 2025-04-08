@@ -36,9 +36,7 @@ jobs:
       uses: gradle/gradle-build-action@v2
 
     - name: Build with Gradle
-      run: 
-         chmod +x ./gradlew
-        ./gradlew build
+      run: ./gradlew build
       
     - name: Publish to GitHub Packages
       run: ./gradlew publish
