@@ -33,8 +33,26 @@ publishing {
     }
     repositories {
         maven {
-            name = 'localRepo'
-            url = layout.buildDirectory.dir("repo")
+            name = 'GitHubPackages'
+            url = "https://maven.pkg.github.com/bvieiradeveloper/JWTLibrary"
+            credentials{
+                usename = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }
+
+//publishing {
+//    publications {
+//        mavenJava(MavenPublication) {
+//            from components.java
+//        }
+//    }
+//    repositories {
+//        maven {
+//            name = 'localRepo'
+//            url = layout.buildDirectory.dir("repo")
+//        }
+//    }
+//}
