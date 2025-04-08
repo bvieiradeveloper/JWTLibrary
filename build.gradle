@@ -36,7 +36,8 @@ publishing {
             name = 'GitHubPackages'
             url = "https://maven.pkg.github.com/bvieiradeveloper/JWTLibrary"
             credentials{
-                password = System.getenv("PUBLISH_PACKAGE_TOKEN")
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
