@@ -1,8 +1,6 @@
 name: Gradle Package
 
-on:
-  release:
-    types: [created]  # Trigger the workflow when a new release is created
+on: push
 
 jobs:
   build:
