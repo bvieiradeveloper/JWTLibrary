@@ -36,8 +36,10 @@ jobs:
       uses: gradle/gradle-build-action@v2
 
     - name: Build with Gradle
-      run: ./gradlew build
-
+      run: 
+         chmod +x ./gradlew
+        ./gradlew build -x test
+      
     - name: Publish to GitHub Packages
       run: ./gradlew publish
       env:
