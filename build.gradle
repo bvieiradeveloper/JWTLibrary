@@ -29,6 +29,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
+            artifactId = 'jwt-library'
         }
     }
     repositories {
